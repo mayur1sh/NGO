@@ -1,17 +1,15 @@
 FROM node:14-alpine
 
-RUN mkdir -p /usr/src/app
-
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 
 RUN npm run build --prod
 
-EXPOSE 3000
+EXPOSE 4200
 
 CMD ["npm", "start"]
