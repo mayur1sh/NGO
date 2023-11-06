@@ -1,7 +1,7 @@
-FROM node:16-alpine AS build
+FROM node:18
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --force --legacy-peer-deps
+RUN npm install --force 
 COPY . .
 RUN npm run build
 EXPOSE 4200
