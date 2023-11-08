@@ -3,6 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --force 
 COPY . .
-RUN ng build
+RUN npm run ng build
 EXPOSE 4200
 CMD ["npm", "start"]
