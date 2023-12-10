@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -9,8 +10,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
-    @Output() Focus = new EventEmitter<string>();
-    constructor(public location: Location, private element: ElementRef) {
+    constructor(public location: Location, private element: ElementRef, private router: Router) {
         this.sidebarVisible = false;
     }
 
@@ -55,6 +55,23 @@ export class NavbarComponent implements OnInit {
         }
     }
     MenuClick(id: any) {
-        this.Focus.emit(id);
+        if (id == "Programs"){
+            this.router.navigate(["programs"]);
+        }
+        if (id == "team"){
+            this.router.navigate(["team"]);
+        }
+        if (id == "home"){
+            this.router.navigate([""]);
+        }
+        if (id == "aboutus"){
+            this.router.navigate(["aboutus"]);
+        }
+        if (id == "Donation"){
+            this.router.navigate(["donation"]);
+        }
+        if (id == "contactus"){
+            this.router.navigate(["contactus"]);
+        }
     }
 }

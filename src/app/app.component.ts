@@ -39,9 +39,4 @@ export class AppComponent implements OnInit {
             });
         });
     }
-    FocusElement(event) {
-        if (event == "Programs"){
-            this.router.navigate(["programs"]);
-        }
-    }
 }

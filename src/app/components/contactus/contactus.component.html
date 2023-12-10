@@ -1,0 +1,64 @@
+<div class="wrapper" tabindex="0">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/bg6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+
+            </div>
+        </div>
+    </div>
+    <div class="container pt-2">
+        <div class="col-md-12">
+            <div class="section-contact-us text-center">
+                <h2 class="title text-center">Contact Us</h2>
+                <div class="container">
+                    <!-- <p style="color: black;">Your project is very important to us.</p> -->
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                                <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons users_circle-08"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" [(ngModel)]="Name" [formControl]="NameFormControl"
+                                        placeholder="Name" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                                <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons tech_mobile"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" [(ngModel)]="Mobile" [formControl]="MobileFormControl"
+                                        placeholder="Mobile" (focus)="focus1=true" (blur)="focus1=false">
+                                </div>
+                                <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus2===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons ui-1_email-85"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" [(ngModel)]="Email" [formControl]="EmailFormControl"
+                                        placeholder="Email" (focus)="focus2=true" (blur)="focus2=false">
+                                </div>
+                                <div class="textarea-container">
+                                    <textarea class="form-control" [(ngModel)]="Message" [formControl]="MessageFormControl"
+                                        name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                                </div>
+                                <div class="send-button">
+                                    <!-- <a class="btn btn-primary btn-round btn-block btn-lg" (click)="SubmitForm()">Send Message</a> -->
+                                    <button class="btn btn-primary btn-round btn-block btn-lg" (click)="SubmitForm()">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

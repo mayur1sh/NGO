@@ -14,6 +14,10 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
 import { ProgramComponent } from './program/program.component';
+import { TeamComponent } from './team/team.component';
+import { AboutUsComponent } from './aboutus/aboutus.component';
+import { DonationComponent } from './donation/donation.component';
+import { ContactUsComponent } from './contactus/contactus.component';
 
 @NgModule({
     imports: [
@@ -24,7 +28,7 @@ import { ProgramComponent } from './program/program.component';
         RouterModule,
         JwBootstrapSwitchNg2Module,
         ReactiveFormsModule
-      ],
+    ],
     declarations: [
         ComponentsComponent,
         BasicelementsComponent,
@@ -33,9 +37,18 @@ import { ProgramComponent } from './program/program.component';
         NucleoiconsComponent,
         NotificationComponent,
         NgbdModalBasic,
-        ProgramComponent
+        ProgramComponent,
+        TeamComponent,
+        AboutUsComponent,
+        DonationComponent,
+        ContactUsComponent
     ],
-   
-    exports:[ ComponentsComponent,ProgramComponent ]
+
+    exports: [ComponentsComponent
+        , ProgramComponent
+        , TeamComponent
+        , AboutUsComponent
+        , DonationComponent
+        ,ContactUsComponent]
 })
 export class ComponentsModule { }

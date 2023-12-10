@@ -9,6 +9,10 @@ import { LoginComponent } from './examples/login/login.component';
 import { ProfileComponent } from './examples/profile/profile.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { ProgramComponent } from './components/program/program.component';
+import { TeamComponent } from './components/team/team.component';
+import { AboutUsComponent } from './components/aboutus/aboutus.component';
+import { DonationComponent } from './components/donation/donation.component';
+import { ContactUsComponent } from './components/contactus/contactus.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -19,6 +23,10 @@ const routes: Routes =[
     { path: 'examples/profile',     component: ProfileComponent },
     { path: 'modes',     component: ComponentsComponent },
     { path: 'programs',     component: ProgramComponent },
+    { path: 'team',     component: TeamComponent },
+    { path: 'aboutus',     component: AboutUsComponent },
+    { path: 'donation',     component: DonationComponent },
+    { path: 'contactus',     component: ContactUsComponent },
 ];
 
 @NgModule({
